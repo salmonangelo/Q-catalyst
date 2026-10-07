@@ -1,0 +1,169 @@
+# Q-Catalyst Configuration File
+# Project: Mechanism-Aware Quantum-AI Triage for PETase Engineering
+
+project:
+  name: "qcatalyst"
+  version: "0.1.0"
+  random_seed: 42
+
+paths:
+  raw_data_dir: "data/raw"
+  curated_data_dir: "data/curated"
+  structures_dir: "data/structures"
+  splits_dir: "data/splits"
+  logs_dir: "logs"
+  curated_variants_file: "data/curated/variants.parquet"
+  quality_report_file: "data/curated/data_quality_report.json"
+
+dataset:
+  primary_benchmark: "PET-Gym"
+  benchmark_sources:
+    - "petgym_single_mutants.csv"
+    - "petgym_multi_mutants.csv"
+    - "petase_variants_literature.csv"
+  required_columns:
+    - "variant_id"
+    - "parent_enzyme"
+    - "sequence"
+    - "mutations"
+
+structure:
+  reference_pdb_id: "5XJH"
+  reference_pdb_file: "data/structures/5xjh.pdb"
+  reference_chain_id: "A"
+  reference_parent: "IsPETase"
+  catalytic_triad:
+    Ser: 160
+    Asp: 206
+    His: 237
+  oxyanion_hole:
+    Tyr: 87
+    Met: 161
+  active_site_radius_angstrom: 8.0
+
+splitting:
+  random_seed: 42
+  strategies:
+    - "study_grouped"
+    - "parent_grouped"
+    - "mutation_complexity"
+    - "random"
+  default_strategy: "study_grouped"
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+validation:
+  strict_amino_acids: true
+  allow_non_canonical_aa: false
+  min_sequence_length: 20
+  max_sequence_length: 1000
+  allowed_activities_min: 0.0
+  tm_celsius_min: 0.0
+  tm_celsius_max: 120.0
+  ph_min: 2.0
+  ph_max: 12.0
+  crystallinity_pct_min: 0.0
+  crystallinity_pct_max: 100.0
+
+chemistry:
+  reference_pdb: "data/structures/5xjh.pdb"
+  reference_chain: "A"
+  active_site_residues: [160, 206, 237, 87, 161, 185, 159]
+  cluster_radius: 6.0
+  charge: 0
+  multiplicity: 1
+  method: "HF"
+  basis: "sto-3g"
+  run_dft: false
+  dft_method: "b3lyp"
+  dft_basis: "sto-3g"
+  cache_directory: "artifacts/chemistry/cache"
+
+quantum:
+  active_electrons: 4
+  active_orbitals: 4
+  mapping_method: "jordan_wigner"
+  ansatz: "TwoLocal"
+  ansatz_reps: 2
+  optimizer: "COBYLA"
+  optimizer_maxiter: 100
+  initial_state: "HartreeFock"
+  noise_enabled: false
+  noise_model: "depolarizing"
+  cache_directory: "artifacts/quantum/cache"
+
+fusion:
+  weights:
+    protein_ai_weight: 0.25
+    uncertainty_quality_weight: 0.15
+    mechanism_proximity_weight: 0.20
+    chemistry_evidence_weight: 0.15
+    quantum_evidence_weight: 0.15
+    diversity_weight: 0.10
+  thresholds:
+    prioritize_min_score: 0.70
+    prioritize_min_coverage: 0.60
+    promising_min_score: 0.50
+    insufficient_evidence_max_coverage: 0.40
+    low_priority_max_score: 0.40
+    uncertainty_low_threshold: 0.30
+    uncertainty_high_threshold: 0.70
+    quantum_excellent_error_ha: 0.010
+    quantum_acceptable_error_ha: 0.050
+  missing_evidence_policy: "renormalize_available"
+  synthetic_data_policy: "preserve_provenance"
+  protein_ai_path: "protein_ai/predictions.parquet"
+  uncertainty_path: "uncertainty/uncertainty.parquet"
+  acquisition_path: "acquisition/selected_candidates.parquet"
+  chemistry_path: "chemistry/chem_results.parquet"
+  quantum_path: "quantum/quantum_results.parquet"
+  output_results_parquet: "fusion/fusion_results.parquet"
+  output_evidence_matrix_parquet: "fusion/evidence_matrix.parquet"
+  output_manifest_json: "fusion/fusion_manifest.json"
+  output_explanations_json: "fusion/candidate_explanations.json"
+
+pipeline:
+  pipeline_name: "qcatalyst_end_to_end"
+  version: "0.1.0"
+  random_seed: 42
+  output_root: "runs"
+  enabled_stages:
+    - "data"
+    - "protein_ai"
+    - "uncertainty"
+    - "acquisition"
+    - "chemistry"
+    - "quantum"
+    - "fusion"
+  fail_fast: true
+  optional_stages:
+    - "quantum"
+  reuse_cached_outputs: true
+  candidate_limit: 10
+  candidate_selection_policy: "deterministic_top"
+  quantum_policy:
+    quantum_mode: "representative"
+    representative_selection: "top_ranked"
+    max_quantum_candidates: 1
+    enable_noise: false
+  synthetic_data_policy: "preserve_provenance"
+  split_strategy: "mutation_complexity"
+
+downstream_contracts:
+  protein_ai: "protein_ai/predictions.parquet"
+  uncertainty: "uncertainty/uncertainty.parquet"
+  acquisition: "acquisition/chem_jobs.json"
+  acquisition_candidates: "acquisition/selected_candidates.parquet"
+  chemistry: "chemistry/chem_results.parquet"
+  cluster_manifest: "chemistry/clusters/cluster_manifest.json"
+  quantum: "quantum/quantum_results.parquet"
+  vqe_history: "quantum/vqe_history.parquet"
+  quantum_manifest: "quantum/quantum_manifest.json"
+  active_space_manifest: "quantum/active_space_manifest.json"
+  fusion: "fusion/fusion_results.parquet"
+  fusion_results: "fusion/fusion_results.parquet"
+  evidence_matrix: "fusion/evidence_matrix.parquet"
+  fusion_manifest: "fusion/fusion_manifest.json"
+  candidate_explanations: "fusion/candidate_explanations.json"
+  benchmark: "benchmark/benchmark_results.parquet"

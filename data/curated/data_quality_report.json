@@ -1,0 +1,16 @@
+{
+  "total_records": 6,
+  "passed": true,
+  "error_count": 0,
+  "warning_count": 0,
+  "summary_metrics": {
+    "total_records": 6,
+    "unique_parents": [
+      "IsPETase"
+    ],
+    "wt_count": 1,
+    "single_mutant_count": 4,
+    "multi_mutant_count": 1
+  },
+  "issues": []
+}
