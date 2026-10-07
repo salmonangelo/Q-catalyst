@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "experiment_type": "Classical_Simulation_of_VQE",
+  "variant_id": "VAR_WT",
+  "active_space": {
+    "electrons": 4,
+    "orbitals": 4,
+    "spin_orbitals": 8,
+    "orbital_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selection_method": "model_synthetic_active_space"
+  },
+  "qubit_hamiltonian": {
+    "num_qubits": 8,
+    "num_pauli_terms": 61,
+    "hamiltonian_hash": "c289357945b3389942687c869a2f27aa3a2275652a58e1e4eea7043a66b1ac46",
+    "mapping": "jordan_wigner"
+  },
+  "casci_reference": {
+    "energy": -18.2157328802059,
+    "hartree_fock_energy": -18.20666666666668,
+    "correlation_energy": -0.009066213539217216,
+    "converged": true,
+    "backend": "ExactDiagonalization_CASCI"
+  },
+  "vqe_results": {
+    "energy": -18.20647500994644,
+    "absolute_error_vs_casci": 0.009257870259457235,
+    "validation_tier": "excellent",
+    "optimizer": "COBYLA",
+    "iterations": 101,
+    "ansatz": "TwoLocal",
+    "ansatz_depth": 2,
+    "backend": "Qiskit_Statevector_VQE",
+    "converged": true
+  },
+  "noise_simulation": {
+    "enabled": false,
+    "model": "none",
+    "noisy_energy": null,
+    "noisy_error_vs_casci": null
+  }
+}

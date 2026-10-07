@@ -1,0 +1,33 @@
+{
+  "variant_id": "VAR_WT",
+  "active_electrons": 4,
+  "active_orbitals": 4,
+  "num_spin_orbitals": 8,
+  "orbital_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "orbital_energies": [
+    -1.2,
+    -0.6666666666666666,
+    -0.1333333333333333,
+    0.4
+  ],
+  "core_energy": -15.0,
+  "selection_method": "model_synthetic_active_space",
+  "charge": 0,
+  "multiplicity": 1,
+  "backend_used": "classical_fallback",
+  "h1_shape": [
+    4,
+    4
+  ],
+  "h2_shape": [
+    4,
+    4,
+    4,
+    4
+  ]
+}
