@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "dataset": "predictions",
+    "split_strategy": "mechanism_aware_without_uncertainty",
+    "gate0_status": "UNVALIDATED_OR_SYNTHETIC_FIXTURE",
+    "acquisition_strategy": "mechanism_aware_without_uncertainty",
+    "budget": 10,
+    "selected_count": 3,
+    "selection_shortfall": 7,
+    "timestamp": "2026-10-07T16:04:30.287309+00:00"
+  },
+  "candidates": [
+    {
+      "variant_id": "VAR_W132H",
+      "parent_enzyme": "IsPETase",
+      "mutations": "W132H",
+      "predicted_performance": 1.3443262577056885,
+      "uncertainty": 0.709632396697998,
+      "proximity_score": null,
+      "diversity_score": 1.0,
+      "estimated_chemistry_cost": "proxy-medium",
+      "acquisition_score": 0.734375,
+      "selection_rank": 1,
+      "selection_reason": "Rank #1 selected via mechanism_aware_without_uncertainty: high predicted activity (1.34); structure mapping notice: numbering_mismatch; high sequence diversity relative to previously selected candidates.",
+      "structure_mapping_status": "numbering_mismatch",
+      "job_id": "chem_job_001",
+      "active_site_residues": [
+        160,
+        206,
+        237,
+        87,
+        161,
+        185,
+        159
+      ],
+      "qm_method_requested": "CASCI_VQE_CLUSTER_TRIAD"
+    },
+    {
+      "variant_id": "VAR_WT",
+      "parent_enzyme": "IsPETase",
+      "mutations": "WT",
+      "predicted_performance": 0.9427556395530701,
+      "uncertainty": 0.5218374729156494,
+      "proximity_score": 1.0,
+      "diversity_score": 0.00016880035400390625,
+      "estimated_chemistry_cost": "proxy-low",
+      "acquisition_score": 0.31253165006637573,
+      "selection_rank": 2,
+      "selection_reason": "Rank #2 selected via mechanism_aware_without_uncertainty: baseline activity (0.94); close active-site proximity (0.0 A to pos 160).",
+      "structure_mapping_status": "mapped_wt",
+      "job_id": "chem_job_002",
+      "active_site_residues": [
+        160,
+        206,
+        237,
+        87,
+        161,
+        185,
+        159
+      ],
+      "qm_method_requested": "CASCI_VQE_CLUSTER_TRIAD"
+    },
+    {
+      "variant_id": "VAR_S133G_D179G",
+      "parent_enzyme": "IsPETase",
+      "mutations": "S133G;D179G",
+      "predicted_performance": 1.0276353359222412,
+      "uncertainty": 1.0,
+      "proximity_score": null,
+      "diversity_score": 3.832578659057617e-05,
+      "estimated_chemistry_cost": "proxy-high",
+      "acquisition_score": 0.18623125553131104,
+      "selection_rank": 3,
+      "selection_reason": "Rank #3 selected via mechanism_aware_without_uncertainty: baseline activity (1.03); structure mapping notice: numbering_mismatch.",
+      "structure_mapping_status": "numbering_mismatch",
+      "job_id": "chem_job_003",
+      "active_site_residues": [
+        160,
+        206,
+        237,
+        87,
+        161,
+        185,
+        159
+      ],
+      "qm_method_requested": "CASCI_VQE_CLUSTER_TRIAD"
+    }
+  ]
+}
