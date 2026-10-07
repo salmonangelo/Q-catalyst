@@ -309,6 +309,37 @@ python -m quantum.evaluate --chem-results chemistry/chem_results.parquet --noise
 
 ---
 
+## Phase 8: Jury-Facing Interactive Application
+
+The **Q-CATALYST** application provides an interactive, jury-grade demonstration platform for technical hackathon evaluation. Built with Streamlit, Plotly, and a custom luxury ivory/gold/silver design system, it makes every computational stage transparent and explorable.
+
+### Launching the Application
+```bash
+streamlit run app/app.py --server.port=8501
+```
+
+### Application Views & Visual Proofs
+
+| View 1: Overview & Vision | View 2: Candidate Triage |
+| :---: | :---: |
+| ![Overview & Vision](docs/screenshots/01_overview_and_vision.png) | ![Candidate Triage](docs/screenshots/02_candidate_triage.png) |
+
+| View 3: Candidate Deep-Dive | View 4: Quantum Lab |
+| :---: | :---: |
+| ![Candidate Deep-Dive](docs/screenshots/03_candidate_deep_dive.png) | ![Quantum Lab](docs/screenshots/04_quantum_lab.png) |
+
+| View 5: Structural Mechanism | View 6: Pipeline & Provenance |
+| :---: | :---: |
+| ![Structural Mechanism](docs/screenshots/05_structural_mechanism.png) | ![Pipeline & Provenance](docs/screenshots/06_pipeline_provenance.png) |
+
+### Key Features
+1. **Dynamic Quantum Metrics**: Reads real $(4e, 4o)$ 8-qubit Hamiltonian values (61 Pauli terms), exact CASCI baseline ($-18.215733\text{ Ha}$), and TwoLocal VQE optimization trajectories directly from `quantum_manifest.json` and `vqe_history.parquet`.
+2. **Residue Numbering Mapping**: Resolves mature 263-AA sequence positions ($W132H$, $S133A$, $D179A$, $H210A$) against crystallographic IsPETase 5XJH precursor coordinates ($W159H$, $S160A$, $D206A$, $H237A$).
+3. **Transparent Evidence Fusion**: Interactive 6-axis Plotly radar chart displaying multimodal channel support with deterministic rule-based explainability.
+4. **Prominent Provenance Flags**: Explicit synthetic fixture badges and clear notices that all evaluations are in-silico computational triage with simulator-based VQE.
+
+---
+
 ## Scientific Scope & Methodological Disclaimers
 
 > [!IMPORTANT]
@@ -319,5 +350,6 @@ python -m quantum.evaluate --chem-results chemistry/chem_results.parquet --noise
 > - **Gate-0 uncertainty usefulness is not considered empirically validated until PET-Gym evaluation is performed.** On unvalidated or synthetic splits, the acquisition gate automatically employs the `mechanism_aware_without_uncertainty` fallback policy.
 > - **Estimated chemistry cost is an in-silico proxy.** The cost metric reflects mutational cluster complexity and mapping availability.
 > - **No Overclaims**: Q-Catalyst produces prioritized candidates for downstream multimodal evidence fusion and laboratory testing. It does not experimentally prove enzyme kinetics or claim quantum advantage without physical experimental validation.
+
 
 
