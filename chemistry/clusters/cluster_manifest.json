@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "cluster_count": 4,
+  "clusters": [
+    {
+      "cluster_id": "WT_5XJH_active_site",
+      "pdb_id": "5XJH",
+      "chain_id": "A",
+      "parent_enzyme": "IsPETase",
+      "residues_included": [
+        87,
+        159,
+        160,
+        161,
+        185,
+        206,
+        237
+      ],
+      "atom_count": 72,
+      "residue_count": 7,
+      "geometry_hash": "aa0ad4eb0a4f96fa750b9e2a5d7ac34c8e44e7e7661987b6a12db1ad7cd2d27b",
+      "radius_angstrom": 6.0,
+      "center_residue": 160,
+      "description": "Reduced catalytic active-site cluster containing Ser160-Asp206-His237 triad, oxyanion hole, and substrate cleft",
+      "xyz_file": "WT_5XJH_active_site.xyz"
+    },
+    {
+      "cluster_id": "VAR_W132H_cluster",
+      "pdb_id": "5XJH",
+      "chain_id": "A",
+      "parent_enzyme": "IsPETase",
+      "residues_included": [
+        87,
+        159,
+        160,
+        161,
+        185,
+        206,
+        237
+      ],
+      "atom_count": 72,
+      "residue_count": 7,
+      "geometry_hash": "aa0ad4eb0a4f96fa750b9e2a5d7ac34c8e44e7e7661987b6a12db1ad7cd2d27b",
+      "radius_angstrom": 6.0,
+      "center_residue": 160,
+      "description": "Active-site cluster for VAR_W132H (mutations outside local cluster)",
+      "xyz_file": "VAR_W132H_cluster.xyz"
+    },
+    {
+      "cluster_id": "WT_5XJH_active_site",
+      "pdb_id": "5XJH",
+      "chain_id": "A",
+      "parent_enzyme": "IsPETase",
+      "residues_included": [
+        87,
+        159,
+        160,
+        161,
+        185,
+        206,
+        237
+      ],
+      "atom_count": 72,
+      "residue_count": 7,
+      "geometry_hash": "aa0ad4eb0a4f96fa750b9e2a5d7ac34c8e44e7e7661987b6a12db1ad7cd2d27b",
+      "radius_angstrom": 6.0,
+      "center_residue": 160,
+      "description": "Reduced catalytic active-site cluster containing Ser160-Asp206-His237 triad, oxyanion hole, and substrate cleft",
+      "xyz_file": "WT_5XJH_active_site.xyz"
+    },
+    {
+      "cluster_id": "VAR_S133G_D179G_cluster",
+      "pdb_id": "5XJH",
+      "chain_id": "A",
+      "parent_enzyme": "IsPETase",
+      "residues_included": [
+        87,
+        159,
+        160,
+        161,
+        185,
+        206,
+        237
+      ],
+      "atom_count": 72,
+      "residue_count": 7,
+      "geometry_hash": "aa0ad4eb0a4f96fa750b9e2a5d7ac34c8e44e7e7661987b6a12db1ad7cd2d27b",
+      "radius_angstrom": 6.0,
+      "center_residue": 160,
+      "description": "Active-site cluster for VAR_S133G_D179G (mutations outside local cluster)",
+      "xyz_file": "VAR_S133G_D179G_cluster.xyz"
+    }
+  ]
+}

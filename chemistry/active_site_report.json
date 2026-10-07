@@ -1,0 +1,112 @@
+{
+  "pdb_id": "5XJH",
+  "chain": "A",
+  "structure_file": "data\\structures\\5xjh.pdb",
+  "residues_requested": [
+    160,
+    206,
+    237,
+    87,
+    161,
+    185,
+    159
+  ],
+  "residues_found": [
+    160,
+    206,
+    237,
+    87,
+    161,
+    185,
+    159
+  ],
+  "residues_missing": [],
+  "atom_count": 72,
+  "mapping_status": "COMPLETE",
+  "residue_details": [
+    {
+      "res_seq": 160,
+      "res_name": "SER",
+      "expected_name": "SER",
+      "is_match": true,
+      "atom_count": 6,
+      "ca_coord": [
+        -5.083000183105469,
+        22.20800018310547,
+        -25.80500030517578
+      ]
+    },
+    {
+      "res_seq": 206,
+      "res_name": "ASP",
+      "expected_name": "ASP",
+      "is_match": true,
+      "atom_count": 8,
+      "ca_coord": [
+        -9.713000297546387,
+        30.22100067138672,
+        -20.70400047302246
+      ]
+    },
+    {
+      "res_seq": 237,
+      "res_name": "HIS",
+      "expected_name": "HIS",
+      "is_match": true,
+      "atom_count": 10,
+      "ca_coord": [
+        -5.489999771118164,
+        28.742000579833984,
+        -20.923999786376953
+      ]
+    },
+    {
+      "res_seq": 87,
+      "res_name": "TYR",
+      "expected_name": "TYR",
+      "is_match": true,
+      "atom_count": 12,
+      "ca_coord": [
+        -0.4729999899864197,
+        24.54400062561035,
+        -31.31399917602539
+      ]
+    },
+    {
+      "res_seq": 161,
+      "res_name": "MET",
+      "expected_name": "MET",
+      "is_match": true,
+      "atom_count": 8,
+      "ca_coord": [
+        -4.834000110626221,
+        20.531999588012695,
+        -29.21299934387207
+      ]
+    },
+    {
+      "res_seq": 185,
+      "res_name": "TRP",
+      "expected_name": "TRP",
+      "is_match": true,
+      "atom_count": 14,
+      "ca_coord": [
+        -9.217000007629395,
+        21.910999298095703,
+        -27.726999282836914
+      ]
+    },
+    {
+      "res_seq": 159,
+      "res_name": "TRP",
+      "expected_name": "TRP",
+      "is_match": true,
+      "atom_count": 14,
+      "ca_coord": [
+        -2.4089999198913574,
+        20.631999969482422,
+        -23.615999221801758
+      ]
+    }
+  ]
+}
