@@ -1,0 +1,89 @@
+{
+  "run_id": "run_20261007_160131_870fb4b9",
+  "timestamp": "2026-10-07T16:01:31.974101+00:00",
+  "completion_time": "2026-10-07T16:01:41.570148+00:00",
+  "total_duration_seconds": 9.596,
+  "pipeline_version": "0.1.0",
+  "random_seed": 42,
+  "config_hash": "870fb4b9",
+  "candidates": {
+    "count": 7,
+    "selection_policy": "deterministic_top",
+    "ids": [
+      "VAR_WT",
+      "VAR_W159H",
+      "VAR_S160A",
+      "VAR_R280A",
+      "VAR_S160G_D206G",
+      "VAR_I168V",
+      "VAR_N246D"
+    ]
+  },
+  "stages": {
+    "status": {
+      "data": "SUCCESS",
+      "protein_ai": "FAILED",
+      "uncertainty": "SKIPPED",
+      "acquisition": "SKIPPED",
+      "chemistry": "SKIPPED",
+      "quantum": "SKIPPED",
+      "fusion": "SKIPPED"
+    },
+    "durations_seconds": {
+      "data": 1.0985,
+      "protein_ai": 8.4936,
+      "uncertainty": 0.0,
+      "acquisition": 0.0,
+      "chemistry": 0.0,
+      "quantum": 0.0,
+      "fusion": 0.0
+    },
+    "start_times": {
+      "data": "2026-10-07T16:01:31.974915+00:00",
+      "protein_ai": "2026-10-07T16:01:33.073635+00:00"
+    },
+    "end_times": {
+      "data": "2026-10-07T16:01:33.073394+00:00",
+      "protein_ai": "2026-10-07T16:01:41.569924+00:00"
+    },
+    "messages": {
+      "protein_ai": "Unhandled exception in stage 'protein_ai': Encountered empty or null sequence during embedding extraction.",
+      "uncertainty": "Previous mandatory stage failed.",
+      "acquisition": "Previous mandatory stage failed.",
+      "chemistry": "Previous mandatory stage failed.",
+      "quantum": "Previous mandatory stage failed.",
+      "fusion": "Previous mandatory stage failed."
+    }
+  },
+  "artifacts": {
+    "inputs": {
+      "variants_parquet": "data\\curated\\variants.parquet"
+    },
+    "outputs": {}
+  },
+  "provenance_and_backends": {
+    "data_source": "curated_variants",
+    "data_quality_flag": "VERIFIED_DATA",
+    "synthetic_data_present": false,
+    "quantum_backend_type": "SIMULATOR",
+    "integral_backend": "CLASSICAL_FALLBACK",
+    "quantum_candidates_processed": [],
+    "quantum_candidates_not_processed": []
+  },
+  "scientific_claims_policy": {
+    "experimental_validation": false,
+    "quantum_advantage": false,
+    "hardware_execution": false,
+    "biological_activity_proven": false,
+    "guardrail_statements": [
+      "This pipeline executes computational triage prioritization, NOT experimental proof of enzyme kinetics.",
+      "Quantum simulations run on classical simulator without claiming quantum hardware advantage.",
+      "No biological conversion rates or benchmark performance numbers have been fabricated."
+    ]
+  },
+  "warnings": [],
+  "errors": [
+    "Stage 'protein_ai' failed: Unhandled exception in stage 'protein_ai': Encountered empty or null sequence during embedding extraction."
+  ],
+  "final_triage_top": []
+}

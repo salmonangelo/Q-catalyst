@@ -1,0 +1,36 @@
+2026-10-07 21:31:31,974 [INFO] Starting Q-Catalyst Pipeline Run: run_20261007_160131_870fb4b9
+2026-10-07 21:31:31,974 [INFO] Output directory: runs\run_20261007_160131_870fb4b9
+2026-10-07 21:31:31,974 [INFO] Enabled stages: ['data', 'protein_ai', 'uncertainty', 'acquisition', 'chemistry', 'quantum', 'fusion']
+2026-10-07 21:31:31,974 [INFO] [1/7] Executing stage: DATA...
+2026-10-07 21:31:33,073 [INFO] Stage 'data' completed successfully in 1.10s.
+2026-10-07 21:31:33,073 [INFO] [2/7] Executing stage: PROTEIN_AI...
+2026-10-07 21:31:41,567 [ERROR] Unhandled exception in stage 'protein_ai': Encountered empty or null sequence during embedding extraction.
+Traceback (most recent call last):
+  File "C:\Users\Asus\Desktop\Q-hacks\pipeline\runner.py", line 107, in run
+    success = stage.run(context, cfg)
+  File "C:\Users\Asus\Desktop\Q-hacks\pipeline\stages.py", line 136, in run
+    run_protein_ai_pipeline(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        variants_parquet=config.variants_parquet,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        output_predictions_path=pred_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        split_strategy=config.split_strategy,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\Desktop\Q-hacks\protein_ai\inference.py", line 101, in run_protein_ai_pipeline
+    X_train, train_var_ids = feature_pipeline.fit_transform(train_df)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Asus\Desktop\Q-hacks\protein_ai\features.py", line 37, in fit_transform
+    raw_features, variant_ids = self._extract_raw_features(df)
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\Asus\Desktop\Q-hacks\protein_ai\features.py", line 72, in _extract_raw_features
+    embeddings, variant_ids = self.embedding_extractor.embed_dataframe(df)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\Asus\Desktop\Q-hacks\protein_ai\embeddings.py", line 99, in embed_dataframe
+    raise ValueError("Encountered empty or null sequence during embedding extraction.")
+ValueError: Encountered empty or null sequence during embedding extraction.
+2026-10-07 21:31:41,569 [ERROR] Mandatory stage 'protein_ai' failed. Aborting.
+2026-10-07 21:31:41,570 [INFO] Pipeline finished in 9.60 seconds.
+2026-10-07 21:31:41,572 [INFO] Saved run manifest and execution reports to: runs\run_20261007_160131_870fb4b9

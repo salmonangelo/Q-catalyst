@@ -1,0 +1,31 @@
+2026-10-07 21:30:53,834 [INFO] Starting Q-Catalyst Pipeline Run: run_20261007_160053_b80328c6
+2026-10-07 21:30:53,834 [INFO] Output directory: runs\run_20261007_160053_b80328c6
+2026-10-07 21:30:53,834 [INFO] Enabled stages: ['data', 'protein_ai', 'uncertainty', 'acquisition', 'chemistry', 'quantum', 'fusion']
+2026-10-07 21:30:53,834 [INFO] [1/7] Executing stage: DATA...
+2026-10-07 21:30:53,891 [INFO] Stage 'data' completed successfully in 0.06s.
+2026-10-07 21:30:53,891 [INFO] [2/7] Executing stage: PROTEIN_AI...
+2026-10-07 21:31:02,795 [ERROR] Unhandled exception in stage 'protein_ai': Curated variants dataset not found at 'data\curated\variants.parquet'.
+Please run 'python data/build_dataset.py' with raw benchmark data first.
+Traceback (most recent call last):
+  File "C:\Users\Asus\Desktop\Q-hacks\pipeline\runner.py", line 107, in run
+    success = stage.run(context, cfg)
+  File "C:\Users\Asus\Desktop\Q-hacks\pipeline\stages.py", line 136, in run
+    run_protein_ai_pipeline(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        variants_parquet=config.variants_parquet,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        output_predictions_path=pred_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        split_strategy=config.split_strategy,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\Desktop\Q-hacks\protein_ai\inference.py", line 53, in run_protein_ai_pipeline
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Curated variants dataset not found at 'data\curated\variants.parquet'.
+Please run 'python data/build_dataset.py' with raw benchmark data first.
+2026-10-07 21:31:02,797 [ERROR] Mandatory stage 'protein_ai' failed. Aborting.
+2026-10-07 21:31:02,798 [INFO] Pipeline finished in 8.96 seconds.
+2026-10-07 21:31:02,801 [INFO] Saved run manifest and execution reports to: runs\run_20261007_160053_b80328c6

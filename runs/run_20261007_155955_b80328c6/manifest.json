@@ -1,0 +1,78 @@
+{
+  "run_id": "run_20261007_155955_b80328c6",
+  "timestamp": "2026-10-07T15:59:55.105351+00:00",
+  "completion_time": "2026-10-07T15:59:55.107944+00:00",
+  "total_duration_seconds": 0.0026,
+  "pipeline_version": "0.1.0",
+  "random_seed": 42,
+  "config_hash": "b80328c6",
+  "candidates": {
+    "count": 0,
+    "selection_policy": "deterministic_top",
+    "ids": []
+  },
+  "stages": {
+    "status": {
+      "data": "FAILED",
+      "protein_ai": "SKIPPED",
+      "uncertainty": "SKIPPED",
+      "acquisition": "SKIPPED",
+      "chemistry": "SKIPPED",
+      "quantum": "SKIPPED",
+      "fusion": "SKIPPED"
+    },
+    "durations_seconds": {
+      "data": 0.0,
+      "protein_ai": 0.0,
+      "uncertainty": 0.0,
+      "acquisition": 0.0,
+      "chemistry": 0.0,
+      "quantum": 0.0,
+      "fusion": 0.0
+    },
+    "start_times": {
+      "data": "2026-10-07T15:59:55.106525+00:00"
+    },
+    "end_times": {
+      "data": "2026-10-07T15:59:55.107737+00:00"
+    },
+    "messages": {
+      "data": "Curated variants dataset not found at data\\curated\\variants.parquet",
+      "protein_ai": "Previous mandatory stage failed.",
+      "uncertainty": "Previous mandatory stage failed.",
+      "acquisition": "Previous mandatory stage failed.",
+      "chemistry": "Previous mandatory stage failed.",
+      "quantum": "Previous mandatory stage failed.",
+      "fusion": "Previous mandatory stage failed."
+    }
+  },
+  "artifacts": {
+    "inputs": {},
+    "outputs": {}
+  },
+  "provenance_and_backends": {
+    "data_source": "curated_variants",
+    "data_quality_flag": "VERIFIED_DATA",
+    "synthetic_data_present": false,
+    "quantum_backend_type": "SIMULATOR",
+    "integral_backend": "CLASSICAL_FALLBACK",
+    "quantum_candidates_processed": [],
+    "quantum_candidates_not_processed": []
+  },
+  "scientific_claims_policy": {
+    "experimental_validation": false,
+    "quantum_advantage": false,
+    "hardware_execution": false,
+    "biological_activity_proven": false,
+    "guardrail_statements": [
+      "This pipeline executes computational triage prioritization, NOT experimental proof of enzyme kinetics.",
+      "Quantum simulations run on classical simulator without claiming quantum hardware advantage.",
+      "No biological conversion rates or benchmark performance numbers have been fabricated."
+    ]
+  },
+  "warnings": [],
+  "errors": [
+    "Stage 'data' failed: Curated variants dataset not found at data\\curated\\variants.parquet"
+  ],
+  "final_triage_top": []
+}

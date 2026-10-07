@@ -1,0 +1,83 @@
+{
+  "run_id": "run_20261007_160053_b80328c6",
+  "timestamp": "2026-10-07T16:00:53.834138+00:00",
+  "completion_time": "2026-10-07T16:01:02.798025+00:00",
+  "total_duration_seconds": 8.9639,
+  "pipeline_version": "0.1.0",
+  "random_seed": 42,
+  "config_hash": "b80328c6",
+  "candidates": {
+    "count": 1,
+    "selection_policy": "deterministic_top",
+    "ids": [
+      "VAR_WT"
+    ]
+  },
+  "stages": {
+    "status": {
+      "data": "SUCCESS",
+      "protein_ai": "FAILED",
+      "uncertainty": "SKIPPED",
+      "acquisition": "SKIPPED",
+      "chemistry": "SKIPPED",
+      "quantum": "SKIPPED",
+      "fusion": "SKIPPED"
+    },
+    "durations_seconds": {
+      "data": 0.0562,
+      "protein_ai": 8.9036,
+      "uncertainty": 0.0,
+      "acquisition": 0.0,
+      "chemistry": 0.0,
+      "quantum": 0.0,
+      "fusion": 0.0
+    },
+    "start_times": {
+      "data": "2026-10-07T16:00:53.834932+00:00",
+      "protein_ai": "2026-10-07T16:00:53.891532+00:00"
+    },
+    "end_times": {
+      "data": "2026-10-07T16:00:53.891168+00:00",
+      "protein_ai": "2026-10-07T16:01:02.797873+00:00"
+    },
+    "messages": {
+      "protein_ai": "Unhandled exception in stage 'protein_ai': Curated variants dataset not found at 'data\\curated\\variants.parquet'.\nPlease run 'python data/build_dataset.py' with raw benchmark data first.",
+      "uncertainty": "Previous mandatory stage failed.",
+      "acquisition": "Previous mandatory stage failed.",
+      "chemistry": "Previous mandatory stage failed.",
+      "quantum": "Previous mandatory stage failed.",
+      "fusion": "Previous mandatory stage failed."
+    }
+  },
+  "artifacts": {
+    "inputs": {
+      "data_source_note": "Curated dataset absent; candidates discovered from available downstream artifacts."
+    },
+    "outputs": {}
+  },
+  "provenance_and_backends": {
+    "data_source": "discovered_downstream_artifacts",
+    "data_quality_flag": "INFERRED_CANDIDATES",
+    "synthetic_data_present": false,
+    "quantum_backend_type": "SIMULATOR",
+    "integral_backend": "CLASSICAL_FALLBACK",
+    "quantum_candidates_processed": [],
+    "quantum_candidates_not_processed": []
+  },
+  "scientific_claims_policy": {
+    "experimental_validation": false,
+    "quantum_advantage": false,
+    "hardware_execution": false,
+    "biological_activity_proven": false,
+    "guardrail_statements": [
+      "This pipeline executes computational triage prioritization, NOT experimental proof of enzyme kinetics.",
+      "Quantum simulations run on classical simulator without claiming quantum hardware advantage.",
+      "No biological conversion rates or benchmark performance numbers have been fabricated."
+    ]
+  },
+  "warnings": [],
+  "errors": [
+    "Stage 'protein_ai' failed: Unhandled exception in stage 'protein_ai': Curated variants dataset not found at 'data\\curated\\variants.parquet'.\nPlease run 'python data/build_dataset.py' with raw benchmark data first."
+  ],
+  "final_triage_top": []
+}

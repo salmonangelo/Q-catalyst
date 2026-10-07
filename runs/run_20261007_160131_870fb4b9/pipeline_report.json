@@ -1,0 +1,32 @@
+{
+  "run_id": "run_20261007_160131_870fb4b9",
+  "timestamp": "2026-10-07T16:01:31.974101+00:00",
+  "completion_time": "2026-10-07T16:01:41.570148+00:00",
+  "total_duration_seconds": 9.596,
+  "candidates_count": 7,
+  "stage_status": {
+    "data": "SUCCESS",
+    "protein_ai": "FAILED",
+    "uncertainty": "SKIPPED",
+    "acquisition": "SKIPPED",
+    "chemistry": "SKIPPED",
+    "quantum": "SKIPPED",
+    "fusion": "SKIPPED"
+  },
+  "stage_durations": {
+    "data": 1.0985,
+    "protein_ai": 8.4936,
+    "uncertainty": 0.0,
+    "acquisition": 0.0,
+    "chemistry": 0.0,
+    "quantum": 0.0,
+    "fusion": 0.0
+  },
+  "quantum_backend": "SIMULATOR",
+  "integral_backend": "CLASSICAL_FALLBACK",
+  "final_ranking": [],
+  "warnings": [],
+  "errors": [
+    "Stage 'protein_ai' failed: Unhandled exception in stage 'protein_ai': Encountered empty or null sequence during embedding extraction."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "run_id": "run_20261007_160419_870fb4b9",
+  "timestamp": "2026-10-07T16:04:19.281773+00:00",
+  "completion_time": "2026-10-07T16:04:30.983983+00:00",
+  "total_duration_seconds": 11.7022,
+  "candidates_count": 6,
+  "stage_status": {
+    "data": "SUCCESS",
+    "protein_ai": "SUCCESS",
+    "uncertainty": "SUCCESS",
+    "acquisition": "SUCCESS",
+    "chemistry": "SUCCESS",
+    "quantum": "SUCCESS",
+    "fusion": "SUCCESS"
+  },
+  "stage_durations": {
+    "data": 0.037,
+    "protein_ai": 8.9417,
+    "uncertainty": 1.9554,
+    "acquisition": 0.0782,
+    "chemistry": 0.101,
+    "quantum": 0.5437,
+    "fusion": 0.0424
+  },
+  "quantum_backend": "SIMULATOR",
+  "integral_backend": "CLASSICAL_FALLBACK",
+  "final_ranking": [
+    {
+      "rank": 1,
+      "candidate_id": "VAR_W132H",
+      "fusion_score": 0.8219,
+      "decision_status": "PRIORITIZE",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "evidence_coverage": "5/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 2,
+      "candidate_id": "VAR_WT",
+      "fusion_score": 0.6304,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "evidence_coverage": "6/6",
+      "vqe_casci_error": 0.009258
+    },
+    {
+      "rank": 3,
+      "candidate_id": "VAR_S133G_D179G",
+      "fusion_score": 0.5538,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "5/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 4,
+      "candidate_id": "VAR_D179A",
+      "fusion_score": 0.3006,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "2/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 5,
+      "candidate_id": "VAR_S133A",
+      "fusion_score": 0.2936,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "2/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 6,
+      "candidate_id": "VAR_H210A",
+      "fusion_score": 0.2749,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "2/6",
+      "vqe_casci_error": null
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

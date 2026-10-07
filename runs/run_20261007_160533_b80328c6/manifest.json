@@ -1,0 +1,166 @@
+{
+  "run_id": "run_20261007_160533_b80328c6",
+  "timestamp": "2026-10-07T16:05:33.734899+00:00",
+  "completion_time": "2026-10-07T16:05:33.837630+00:00",
+  "total_duration_seconds": 0.1027,
+  "pipeline_version": "0.1.0",
+  "random_seed": 42,
+  "config_hash": "b80328c6",
+  "candidates": {
+    "count": 6,
+    "selection_policy": "deterministic_top",
+    "ids": [
+      "VAR_WT",
+      "VAR_W132H",
+      "VAR_S133A",
+      "VAR_D179A",
+      "VAR_H210A",
+      "VAR_S133G_D179G"
+    ]
+  },
+  "stages": {
+    "status": {
+      "data": "SUCCESS",
+      "protein_ai": "SUCCESS",
+      "uncertainty": "SUCCESS",
+      "acquisition": "SUCCESS",
+      "chemistry": "SUCCESS",
+      "quantum": "SUCCESS",
+      "fusion": "SUCCESS"
+    },
+    "durations_seconds": {
+      "data": 0.0535,
+      "protein_ai": 0.0001,
+      "uncertainty": 0.0001,
+      "acquisition": 0.0002,
+      "chemistry": 0.0001,
+      "quantum": 0.0036,
+      "fusion": 0.0415
+    },
+    "start_times": {
+      "data": "2026-10-07T16:05:33.735973+00:00",
+      "protein_ai": "2026-10-07T16:05:33.789764+00:00",
+      "uncertainty": "2026-10-07T16:05:33.790075+00:00",
+      "acquisition": "2026-10-07T16:05:33.791563+00:00",
+      "chemistry": "2026-10-07T16:05:33.791866+00:00",
+      "quantum": "2026-10-07T16:05:33.792107+00:00",
+      "fusion": "2026-10-07T16:05:33.795904+00:00"
+    },
+    "end_times": {
+      "data": "2026-10-07T16:05:33.789515+00:00",
+      "protein_ai": "2026-10-07T16:05:33.789922+00:00",
+      "uncertainty": "2026-10-07T16:05:33.790228+00:00",
+      "acquisition": "2026-10-07T16:05:33.791735+00:00",
+      "chemistry": "2026-10-07T16:05:33.792004+00:00",
+      "quantum": "2026-10-07T16:05:33.795712+00:00",
+      "fusion": "2026-10-07T16:05:33.837438+00:00"
+    },
+    "messages": {}
+  },
+  "artifacts": {
+    "inputs": {
+      "variants_parquet": "data\\curated\\variants.parquet"
+    },
+    "outputs": {
+      "protein_ai_parquet": "protein_ai\\predictions.parquet",
+      "uncertainty_parquet": "uncertainty\\uncertainty.parquet",
+      "gate0_report_json": "uncertainty\\gate0_report.json",
+      "acquisition_parquet": "acquisition\\selected_candidates.parquet",
+      "chem_jobs_json": "acquisition\\chem_jobs.json",
+      "chemistry_parquet": "chemistry\\chem_results.parquet",
+      "cluster_manifest_json": "chemistry\\clusters\\cluster_manifest.json",
+      "quantum_parquet": "quantum\\quantum_results.parquet",
+      "quantum_manifest_json": "quantum\\quantum_manifest.json",
+      "fusion_results_parquet": "fusion\\fusion_results.parquet",
+      "evidence_matrix_parquet": "fusion\\evidence_matrix.parquet",
+      "fusion_manifest_json": "fusion\\fusion_manifest.json",
+      "candidate_explanations_json": "fusion\\candidate_explanations.json"
+    }
+  },
+  "provenance_and_backends": {
+    "data_source": "curated_variants",
+    "data_quality_flag": "VERIFIED_DATA",
+    "synthetic_data_present": false,
+    "quantum_backend_type": "SIMULATOR",
+    "integral_backend": "CLASSICAL_FALLBACK",
+    "quantum_candidates_processed": [
+      "VAR_WT"
+    ],
+    "quantum_candidates_not_processed": [
+      "VAR_W132H",
+      "VAR_S133A",
+      "VAR_D179A",
+      "VAR_H210A",
+      "VAR_S133G_D179G"
+    ]
+  },
+  "scientific_claims_policy": {
+    "experimental_validation": false,
+    "quantum_advantage": false,
+    "hardware_execution": false,
+    "biological_activity_proven": false,
+    "guardrail_statements": [
+      "This pipeline executes computational triage prioritization, NOT experimental proof of enzyme kinetics.",
+      "Quantum simulations run on classical simulator without claiming quantum hardware advantage.",
+      "No biological conversion rates or benchmark performance numbers have been fabricated."
+    ]
+  },
+  "warnings": [],
+  "errors": [],
+  "final_triage_top": [
+    {
+      "rank": 1,
+      "candidate_id": "VAR_W132H",
+      "fusion_score": 0.8219,
+      "decision_status": "PRIORITIZE",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "evidence_coverage": "5/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 2,
+      "candidate_id": "VAR_WT",
+      "fusion_score": 0.6304,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "evidence_coverage": "6/6",
+      "vqe_casci_error": 0.009258
+    },
+    {
+      "rank": 3,
+      "candidate_id": "VAR_S133G_D179G",
+      "fusion_score": 0.5538,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "5/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 4,
+      "candidate_id": "VAR_D179A",
+      "fusion_score": 0.3006,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "2/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 5,
+      "candidate_id": "VAR_S133A",
+      "fusion_score": 0.2936,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "2/6",
+      "vqe_casci_error": null
+    },
+    {
+      "rank": 6,
+      "candidate_id": "VAR_H210A",
+      "fusion_score": 0.2749,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "evidence_coverage": "2/6",
+      "vqe_casci_error": null
+    }
+  ]
+}

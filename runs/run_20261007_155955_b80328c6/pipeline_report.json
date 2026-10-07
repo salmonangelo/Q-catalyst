@@ -1,0 +1,32 @@
+{
+  "run_id": "run_20261007_155955_b80328c6",
+  "timestamp": "2026-10-07T15:59:55.105351+00:00",
+  "completion_time": "2026-10-07T15:59:55.107944+00:00",
+  "total_duration_seconds": 0.0026,
+  "candidates_count": 0,
+  "stage_status": {
+    "data": "FAILED",
+    "protein_ai": "SKIPPED",
+    "uncertainty": "SKIPPED",
+    "acquisition": "SKIPPED",
+    "chemistry": "SKIPPED",
+    "quantum": "SKIPPED",
+    "fusion": "SKIPPED"
+  },
+  "stage_durations": {
+    "data": 0.0,
+    "protein_ai": 0.0,
+    "uncertainty": 0.0,
+    "acquisition": 0.0,
+    "chemistry": 0.0,
+    "quantum": 0.0,
+    "fusion": 0.0
+  },
+  "quantum_backend": "SIMULATOR",
+  "integral_backend": "CLASSICAL_FALLBACK",
+  "final_ranking": [],
+  "warnings": [],
+  "errors": [
+    "Stage 'data' failed: Curated variants dataset not found at data\\curated\\variants.parquet"
+  ]
+}
