@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF9F6;
+    color: #343A40;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #121417;
+    letter-spacing: -0.02em;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Luxury card and subtle gradient helpers */
+.qc-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E3E5E8;
+  border-radius: 0.875rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.qc-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.qc-card-gold {
+  border-left: 4px solid #C59A45;
+}
+
+.qc-card-quantum {
+  border-left: 4px solid #5B4AE4;
+}
+
+.hero-gradient {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F7F3 100%);
+}

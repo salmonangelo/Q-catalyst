@@ -340,6 +340,78 @@ streamlit run app/app.py --server.port=8501
 
 ---
 
+## Phase 9: Production Frontend & Backend API Layer
+
+Phase 9 implements a production-grade **React + TypeScript + Vite** frontend styled with a luxury scientific aesthetic (Warm Ivory, Metallic Gold, Platinum Silver, and Indigo accents) paired with a **FastAPI** Python API layer serving real project artifacts.
+
+### Architecture Overview
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    REACT FRONTEND (Vite)                    │
+│   Overview • Candidate Triage • Deep Dive • Quantum Lab     │
+│       Structural Mechanism • Pipeline • Provenance          │
+└──────────────────────────────┬──────────────────────────────┘
+                               │  VITE_API_BASE_URL (JSON)
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   FASTAPI BACKEND (Python)                  │
+│       /api/overview • /api/candidates • /api/quantum        │
+│          /api/structure • /api/pipeline • /api/provenance   │
+└──────────────────────────────┬──────────────────────────────┘
+                               │  Reads Parquet / JSON
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│                 SCIENTIFIC ARTIFACT LAYER                   │
+│   fusion_results.parquet • quantum_results.parquet          │
+│     vqe_history.parquet • active_site_report.json           │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Local Development Setup
+
+#### 1. Start Python FastAPI Backend
+```bash
+uvicorn backend.main:app --reload --port 8000
+```
+API Documentation will be available at `http://localhost:8000/docs`.
+
+#### 2. Start React Frontend (Vite)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+The React application will be available at `http://localhost:5173`.
+
+#### 3. Run Automated Tests
+```bash
+# Backend pytest suite (103/103 tests passing)
+pytest -v
+
+# Frontend Vitest suite
+cd frontend && npm test
+
+# Production bundle build
+cd frontend && npm run build
+```
+
+---
+
+### Vercel Deployment Architecture
+
+1. **Frontend (Vercel)**:
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+   - **Framework Preset**: `Vite`
+   - **Configuration**: Defined in `frontend/vercel.json` with SPA routing rewrites to `/index.html`.
+   - **Environment Variable**: `VITE_API_BASE_URL=https://<your-backend-api-domain>`
+
+2. **Backend API**:
+   - Deployed as a Python service (FastAPI) or serverless runtime exposing CORS-configured API endpoints connected to the project's generated analytical artifacts.
+
+---
+
 ## Scientific Scope & Methodological Disclaimers
 
 > [!IMPORTANT]
@@ -350,6 +422,7 @@ streamlit run app/app.py --server.port=8501
 > - **Gate-0 uncertainty usefulness is not considered empirically validated until PET-Gym evaluation is performed.** On unvalidated or synthetic splits, the acquisition gate automatically employs the `mechanism_aware_without_uncertainty` fallback policy.
 > - **Estimated chemistry cost is an in-silico proxy.** The cost metric reflects mutational cluster complexity and mapping availability.
 > - **No Overclaims**: Q-Catalyst produces prioritized candidates for downstream multimodal evidence fusion and laboratory testing. It does not experimentally prove enzyme kinetics or claim quantum advantage without physical experimental validation.
+
 
 
 
