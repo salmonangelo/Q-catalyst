@@ -1,0 +1,19 @@
+{
+  "dataset_name": "variants",
+  "split_strategy": "mutation_complexity",
+  "n_samples": 1,
+  "uncertainty_method": "composite (ens=0.40, ood=0.35, conf=0.25)",
+  "error_metric": "MAE",
+  "spearman_correlation": null,
+  "spearman_pvalue": null,
+  "pearson_correlation": null,
+  "low_uncertainty_mean_error": null,
+  "high_uncertainty_mean_error": null,
+  "error_ratio_high_vs_low": null,
+  "useful_signal": false,
+  "signal_strength": "INSUFFICIENT_DATA",
+  "recommendation": "Acquire larger benchmark dataset before drawing conclusions on uncertainty quality.",
+  "limitations": [
+    "Insufficient test samples (N=1) to compute statistically meaningful Gate-0 correlation."
+  ]
+}
