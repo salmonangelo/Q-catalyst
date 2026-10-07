@@ -1,0 +1,276 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "VAR_W132H",
+      "rank": 1,
+      "decision_status": "PRIORITIZE",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "fusion_score": 0.8218972926759209,
+      "summary": "Ranked #1 with composite fusion score 0.82 (PRIORITIZE). Supported by Strong protein sequence fitness score (1.00)., High catalytic active-site geometric proximity (0.73).. Evidence coverage: 5/6 channels.",
+      "positive_factors": [
+        "Strong protein sequence fitness score (1.00).",
+        "High catalytic active-site geometric proximity (0.73).",
+        "Valid active-site cluster geometry and converged classical electronic structure.",
+        "High mutational sequence diversity relative to other candidates."
+      ],
+      "negative_factors": [],
+      "missing_evidence": [
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    {
+      "candidate_id": "VAR_WT",
+      "rank": 2,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "fusion_score": 0.6304082670220875,
+      "summary": "Ranked #2 with composite fusion score 0.63 (PROMISING_BUT_UNCERTAIN). Supported by Strong protein sequence fitness score (0.94)., Valid active-site cluster geometry and converged classical electronic structure.; tempered by distal to core catalytic active-site pocket (0.31).. Evidence coverage: 6/6 channels.",
+      "positive_factors": [
+        "Strong protein sequence fitness score (0.94).",
+        "Valid active-site cluster geometry and converged classical electronic structure.",
+        "Excellent VQE/CASCI quantum agreement (|\u0394E| = 0.0093 Ha)."
+      ],
+      "negative_factors": [
+        "Distal to core catalytic active-site pocket (0.31)."
+      ],
+      "missing_evidence": [],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    {
+      "candidate_id": "VAR_S133G_D179G",
+      "rank": 3,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.5537877737731597,
+      "summary": "Ranked #3 with composite fusion score 0.55 (PROMISING_BUT_UNCERTAIN). Supported by Strong protein sequence fitness score (1.00)., Valid active-site cluster geometry and converged classical electronic structure.; tempered by high predictive uncertainty (high).. Evidence coverage: 5/6 channels.",
+      "positive_factors": [
+        "Strong protein sequence fitness score (1.00).",
+        "Valid active-site cluster geometry and converged classical electronic structure."
+      ],
+      "negative_factors": [
+        "High predictive uncertainty (HIGH).",
+        "Distal to core catalytic active-site pocket (0.19)."
+      ],
+      "missing_evidence": [
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    {
+      "candidate_id": "VAR_D179A",
+      "rank": 4,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.30057288710011576,
+      "summary": "Ranked #4 with composite fusion score 0.30 (INSUFFICIENT_EVIDENCE). Supported by moderate baseline metrics; tempered by low predicted sequence fitness (0.21).. Evidence coverage: 2/6 channels.",
+      "positive_factors": [],
+      "negative_factors": [
+        "Low predicted sequence fitness (0.21)."
+      ],
+      "missing_evidence": [
+        "Active-site structural proximity was unavailable.",
+        "Classical chemistry electronic structure was not computed for this candidate.",
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    {
+      "candidate_id": "VAR_S133A",
+      "rank": 5,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.2935886284149021,
+      "summary": "Ranked #5 with composite fusion score 0.29 (INSUFFICIENT_EVIDENCE). Supported by moderate baseline metrics; tempered by low predicted sequence fitness (0.19).. Evidence coverage: 2/6 channels.",
+      "positive_factors": [],
+      "negative_factors": [
+        "Low predicted sequence fitness (0.19)."
+      ],
+      "missing_evidence": [
+        "Active-site structural proximity was unavailable.",
+        "Classical chemistry electronic structure was not computed for this candidate.",
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    {
+      "candidate_id": "VAR_H210A",
+      "rank": 6,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.27494994431856723,
+      "summary": "Ranked #6 with composite fusion score 0.27 (INSUFFICIENT_EVIDENCE). Supported by moderate baseline metrics; tempered by low predicted sequence fitness (0.12).. Evidence coverage: 2/6 channels.",
+      "positive_factors": [],
+      "negative_factors": [
+        "Low predicted sequence fitness (0.12)."
+      ],
+      "missing_evidence": [
+        "Active-site structural proximity was unavailable.",
+        "Classical chemistry electronic structure was not computed for this candidate.",
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    }
+  ],
+  "by_id": {
+    "VAR_W132H": {
+      "candidate_id": "VAR_W132H",
+      "rank": 1,
+      "decision_status": "PRIORITIZE",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "fusion_score": 0.8218972926759209,
+      "summary": "Ranked #1 with composite fusion score 0.82 (PRIORITIZE). Supported by Strong protein sequence fitness score (1.00)., High catalytic active-site geometric proximity (0.73).. Evidence coverage: 5/6 channels.",
+      "positive_factors": [
+        "Strong protein sequence fitness score (1.00).",
+        "High catalytic active-site geometric proximity (0.73).",
+        "Valid active-site cluster geometry and converged classical electronic structure.",
+        "High mutational sequence diversity relative to other candidates."
+      ],
+      "negative_factors": [],
+      "missing_evidence": [
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    "VAR_WT": {
+      "candidate_id": "VAR_WT",
+      "rank": 2,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "MODERATE_CONFIDENCE",
+      "fusion_score": 0.6304082670220875,
+      "summary": "Ranked #2 with composite fusion score 0.63 (PROMISING_BUT_UNCERTAIN). Supported by Strong protein sequence fitness score (0.94)., Valid active-site cluster geometry and converged classical electronic structure.; tempered by distal to core catalytic active-site pocket (0.31).. Evidence coverage: 6/6 channels.",
+      "positive_factors": [
+        "Strong protein sequence fitness score (0.94).",
+        "Valid active-site cluster geometry and converged classical electronic structure.",
+        "Excellent VQE/CASCI quantum agreement (|\u0394E| = 0.0093 Ha)."
+      ],
+      "negative_factors": [
+        "Distal to core catalytic active-site pocket (0.31)."
+      ],
+      "missing_evidence": [],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    "VAR_S133G_D179G": {
+      "candidate_id": "VAR_S133G_D179G",
+      "rank": 3,
+      "decision_status": "PROMISING_BUT_UNCERTAIN",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.5537877737731597,
+      "summary": "Ranked #3 with composite fusion score 0.55 (PROMISING_BUT_UNCERTAIN). Supported by Strong protein sequence fitness score (1.00)., Valid active-site cluster geometry and converged classical electronic structure.; tempered by high predictive uncertainty (high).. Evidence coverage: 5/6 channels.",
+      "positive_factors": [
+        "Strong protein sequence fitness score (1.00).",
+        "Valid active-site cluster geometry and converged classical electronic structure."
+      ],
+      "negative_factors": [
+        "High predictive uncertainty (HIGH).",
+        "Distal to core catalytic active-site pocket (0.19)."
+      ],
+      "missing_evidence": [
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    "VAR_D179A": {
+      "candidate_id": "VAR_D179A",
+      "rank": 4,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.30057288710011576,
+      "summary": "Ranked #4 with composite fusion score 0.30 (INSUFFICIENT_EVIDENCE). Supported by moderate baseline metrics; tempered by low predicted sequence fitness (0.21).. Evidence coverage: 2/6 channels.",
+      "positive_factors": [],
+      "negative_factors": [
+        "Low predicted sequence fitness (0.21)."
+      ],
+      "missing_evidence": [
+        "Active-site structural proximity was unavailable.",
+        "Classical chemistry electronic structure was not computed for this candidate.",
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    "VAR_S133A": {
+      "candidate_id": "VAR_S133A",
+      "rank": 5,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.2935886284149021,
+      "summary": "Ranked #5 with composite fusion score 0.29 (INSUFFICIENT_EVIDENCE). Supported by moderate baseline metrics; tempered by low predicted sequence fitness (0.19).. Evidence coverage: 2/6 channels.",
+      "positive_factors": [],
+      "negative_factors": [
+        "Low predicted sequence fitness (0.19)."
+      ],
+      "missing_evidence": [
+        "Active-site structural proximity was unavailable.",
+        "Classical chemistry electronic structure was not computed for this candidate.",
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    },
+    "VAR_H210A": {
+      "candidate_id": "VAR_H210A",
+      "rank": 6,
+      "decision_status": "INSUFFICIENT_EVIDENCE",
+      "confidence_label": "LOW_CONFIDENCE",
+      "fusion_score": 0.27494994431856723,
+      "summary": "Ranked #6 with composite fusion score 0.27 (INSUFFICIENT_EVIDENCE). Supported by moderate baseline metrics; tempered by low predicted sequence fitness (0.12).. Evidence coverage: 2/6 channels.",
+      "positive_factors": [],
+      "negative_factors": [
+        "Low predicted sequence fitness (0.12)."
+      ],
+      "missing_evidence": [
+        "Active-site structural proximity was unavailable.",
+        "Classical chemistry electronic structure was not computed for this candidate.",
+        "Quantum simulation was not executed for this candidate."
+      ],
+      "limitations": [
+        "This ranking represents computational triage recommendation, not experimental proof of enzyme kinetics.",
+        "Quantum evidence is derived from classical statevector simulation on simulator backend of a reduced (4e, 4o) active-space model (not quantum hardware).",
+        "Active-space integrals were derived from physical-chemical model calculations rather than ab-initio PySCF."
+      ]
+    }
+  }
+}
