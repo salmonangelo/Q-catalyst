@@ -33,11 +33,19 @@ export const RankingBarChart: React.FC<RankingBarChartProps> = ({ candidates }) 
           layout="vertical"
           margin={{ top: 10, right: 30, left: 40, bottom: 10 }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#F0F2F5" />
-          <XAxis type="number" domain={[0, 1.05]} stroke="#7A828E" fontSize={11} />
-          <YAxis dataKey="name" type="category" stroke="#121417" fontSize={11} width={80} />
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(203, 213, 225, 0.08)" />
+          <XAxis type="number" domain={[0, 1.05]} stroke="#64748B" fontSize={11} />
+          <YAxis dataKey="name" type="category" stroke="#CBD5E1" fontSize={11} width={80} />
           <Tooltip
-            contentStyle={{ backgroundColor: '#FFFFFF', borderColor: '#E3E5E8', borderRadius: '8px', fontSize: '12px' }}
+            contentStyle={{ 
+              backgroundColor: '#0D1222', 
+              borderColor: 'rgba(245, 158, 11, 0.4)', 
+              borderRadius: '8px', 
+              fontSize: '12px',
+              color: '#F8FAFC',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.6)'
+            }}
+            itemStyle={{ color: '#FDE047' }}
             formatter={(val: number) => [`${val.toFixed(4)}`, 'Composite Score']}
           />
           <Bar dataKey="score" radius={[0, 4, 4, 0]}>
@@ -46,10 +54,10 @@ export const RankingBarChart: React.FC<RankingBarChartProps> = ({ candidates }) 
                 key={`cell-${index}`}
                 fill={
                   entry.status === 'PRIORITIZE'
-                    ? '#C59A45'
+                    ? '#F59E0B'
                     : entry.status === 'PROMISING_BUT_UNCERTAIN'
-                    ? '#5B4AE4'
-                    : '#D1D5DB'
+                    ? '#06B6D4'
+                    : '#475569'
                 }
               />
             ))}

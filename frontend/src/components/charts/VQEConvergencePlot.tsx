@@ -25,46 +25,53 @@ export const VQEConvergencePlot: React.FC<VQEConvergencePlotProps> = ({
     <div className="w-full h-80">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={history} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#F0F2F5" />
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(203, 213, 225, 0.08)" />
           <XAxis
             dataKey="iteration"
-            stroke="#7A828E"
+            stroke="#64748B"
             fontSize={11}
             tickLine={false}
-            label={{ value: 'Optimizer Iteration', position: 'insideBottom', offset: -10, fill: '#6C757D', fontSize: 12 }}
+            label={{ value: 'Optimizer Iteration', position: 'insideBottom', offset: -10, fill: '#94A3B8', fontSize: 12 }}
           />
           <YAxis
-            stroke="#7A828E"
+            stroke="#64748B"
             fontSize={11}
             tickLine={false}
             domain={['auto', 'auto']}
             tickFormatter={(val) => val.toFixed(4)}
-            label={{ value: 'Energy (Hartree)', angle: -90, position: 'insideLeft', fill: '#6C757D', fontSize: 12 }}
+            label={{ value: 'Energy (Hartree)', angle: -90, position: 'insideLeft', fill: '#94A3B8', fontSize: 12 }}
           />
           <Tooltip
-            contentStyle={{ backgroundColor: '#FFFFFF', borderColor: '#E3E5E8', borderRadius: '8px', fontSize: '12px' }}
+            contentStyle={{ 
+              backgroundColor: '#0D1222', 
+              borderColor: 'rgba(245, 158, 11, 0.4)', 
+              borderRadius: '8px', 
+              fontSize: '12px',
+              color: '#F8FAFC',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.6)'
+            }}
             formatter={(val: number) => [`${val.toFixed(6)} Ha`, 'VQE Energy']}
             labelFormatter={(label) => `Iteration ${label}`}
           />
           <ReferenceLine
             y={casciEnergy}
-            stroke="#121417"
+            stroke="#DC2626"
             strokeDasharray="4 4"
             strokeWidth={1.5}
             label={{
               value: `CASCI Reference: ${casciEnergy.toFixed(6)} Ha`,
               position: 'insideTopRight',
-              fill: '#121417',
+              fill: '#EF4444',
               fontSize: 11,
             }}
           />
           <Line
             type="monotone"
             dataKey="energy"
-            stroke="#C59A45"
+            stroke="#F59E0B"
             strokeWidth={2.5}
-            dot={{ r: 3, fill: '#C59A45' }}
-            activeDot={{ r: 5 }}
+            dot={{ r: 3, fill: '#F59E0B' }}
+            activeDot={{ r: 6, fill: '#FDE047' }}
             name="VQE (TwoLocal/COBYLA)"
           />
         </LineChart>
