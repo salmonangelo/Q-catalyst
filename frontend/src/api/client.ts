@@ -1,4 +1,4 @@
-/** API client for Q-Catalyst frontend */
+/** API client for Q-Catalyst frontend with automatic fallback support for static hosting (e.g. Vercel) */
 
 import {
   CandidateDetailResponse,
@@ -12,9 +12,21 @@ import {
   StructureResponse,
 } from '@/types/api';
 
+import {
+  fallbackCandidates,
+  fallbackCandidateDetails,
+  fallbackHealth,
+  fallbackOverview,
+  fallbackPipeline,
+  fallbackProvenance,
+  fallbackQuantum,
+  fallbackQuantumHistory,
+  fallbackStructure,
+} from './mockData';
+
 const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
-async function fetchJson<T>(endpoint: string): Promise<T> {
+async function fetchWithFallback<T>(endpoint: string, fallbackValue: T): Promise<T> {
   const url = `${API_BASE}${endpoint}`;
   try {
     const res = await fetch(url);
@@ -23,19 +35,25 @@ async function fetchJson<T>(endpoint: string): Promise<T> {
     }
     return await res.json();
   } catch (err) {
-    console.warn(`Fetch to ${url} failed. Using built-in local fallback data.`, err);
-    throw err;
+    // Graceful fallback for static deployments (Vercel) without active backend instance
+    return fallbackValue;
   }
 }
 
 export const api = {
-  getHealth: () => fetchJson<HealthResponse>('/api/health'),
-  getOverview: () => fetchJson<OverviewResponse>('/api/overview'),
-  getCandidates: () => fetchJson<CandidatesListResponse>('/api/candidates'),
-  getCandidateDetail: (id: string) => fetchJson<CandidateDetailResponse>(`/api/candidates/${encodeURIComponent(id)}`),
-  getQuantum: () => fetchJson<QuantumDetailsResponse>('/api/quantum'),
-  getQuantumHistory: () => fetchJson<QuantumHistoryResponse>('/api/quantum/history'),
-  getStructure: () => fetchJson<StructureResponse>('/api/structure'),
-  getPipeline: () => fetchJson<PipelineResponse>('/api/pipeline'),
-  getProvenance: () => fetchJson<ProvenanceResponse>('/api/provenance'),
+  getHealth: () => fetchWithFallback<HealthResponse>('/api/health', fallbackHealth),
+  getOverview: () => fetchWithFallback<OverviewResponse>('/api/overview', fallbackOverview),
+  getCandidates: () => fetchWithFallback<CandidatesListResponse>('/api/candidates', fallbackCandidates),
+  getCandidateDetail: (id: string) => {
+    const fallback = fallbackCandidateDetails[id] || {
+      ...fallbackCandidateDetails['VAR_W132H'],
+      candidate: fallbackCandidates.candidates.find((c) => c.candidate_id === id) || fallbackCandidates.candidates[0],
+    };
+    return fetchWithFallback<CandidateDetailResponse>(`/api/candidates/${encodeURIComponent(id)}`, fallback);
+  },
+  getQuantum: () => fetchWithFallback<QuantumDetailsResponse>('/api/quantum', fallbackQuantum),
+  getQuantumHistory: () => fetchWithFallback<QuantumHistoryResponse>('/api/quantum/history', fallbackQuantumHistory),
+  getStructure: () => fetchWithFallback<StructureResponse>('/api/structure', fallbackStructure),
+  getPipeline: () => fetchWithFallback<PipelineResponse>('/api/pipeline', fallbackPipeline),
+  getProvenance: () => fetchWithFallback<ProvenanceResponse>('/api/provenance', fallbackProvenance),
 };
