@@ -37,3 +37,6 @@ minversion = "7.0"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = "-v --tb=short"
+
+[tool.vercel]
+entrypoint = "backend.main:app"
