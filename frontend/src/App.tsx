@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from '@/components/layout/Navbar';
-import { HeaderBanner } from '@/components/layout/HeaderBanner';
 import { Footer } from '@/components/layout/Footer';
 
 import { OverviewPage } from '@/pages/OverviewPage';
@@ -48,7 +47,6 @@ export function App() {
 
         {/* Foreground Content */}
         <div className="relative z-10 flex flex-col min-h-screen">
-          <HeaderBanner />
           <Navbar />
           <main className="grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <Routes>

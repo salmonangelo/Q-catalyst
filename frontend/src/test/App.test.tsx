@@ -12,11 +12,6 @@ describe('Q-Catalyst React Application', () => {
     expect(titleElements.length).toBeGreaterThan(0);
   });
 
-  it('renders synthetic fixture disclaimer banner', async () => {
-    render(<App />);
-    expect(screen.getByText(/DEMO EVALUATION FIXTURE/i)).toBeInTheDocument();
-  });
-
   it('renders navigation links across all primary views', async () => {
     render(<App />);
     expect(screen.getByText('Candidate Triage')).toBeInTheDocument();
